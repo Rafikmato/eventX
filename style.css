@@ -1,0 +1,736 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI';
+}
+
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: #000;
+    z-index: 1000;
+}
+
+.nav-logo{
+    float: left;
+    margin: -3px 0 0 80px;
+}
+
+.nav-logo span{
+    color: white;
+    font-size: 30px;
+}
+
+.nav-logo span.x{
+    color: red;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+
+.nav-menu{
+    float: right;
+    list-style-type: none;
+    margin-right: 50px;
+}
+
+.nav-menu .nav-bar{
+    display: inline-block;
+    padding: 17px 10px;
+}
+
+.nav-menu .nav-bar .nav-link{
+    text-decoration: none;
+    color: white;
+}
+
+
+.nav-link::after{
+    content: "";
+    display: block;
+    border-bottom: 3px solid red;
+    opacity: 0;
+    transition: all 1s;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.nav-link:hover::after{
+    opacity: 1;
+    width: 90%;
+}
+
+.active::after{
+    content: "";
+    display: block;
+    border-bottom: 3px solid red;
+    opacity: 1;
+    transition: all 1s;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.utama{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* padding-bottom: 110vh; */
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(artists/Tiesto.jpg) no-repeat center top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* section{
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+} */
+
+
+.utama::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, rgb(19, 19, 19), transparent);
+    z-index: 1000;
+}
+
+.utama .judul{
+    /* float: right; */
+    position: absolute;
+    top: 70px;
+    right: 80px;
+}
+
+.utama .judul h1{
+    font-size: 40px;
+    color: white;
+    font-weight: 500;
+}
+
+.utama .judul .music{
+    color: red;
+    font-weight: bold;
+}
+
+
+.middle-content{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.middle-content p{
+    font-size: 24px;
+    color: white;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.middle-content .red{
+    color: red;
+    font-weight: bold;
+}
+
+.middle-content .tiket{
+    line-height: 100px;
+    padding: 10px 30px;
+    background: red;
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.date{
+    width: 35%;
+    /* height: auto; */
+    text-align: center;
+    position: absolute;
+    bottom: 120px;
+    left: 10px;
+    /* padding: 50px 0 0 50px; */
+}
+
+.date p{
+    color: white;
+    font-size: 24px;
+}
+
+
+.kedua{
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    background: rgb(19, 19, 19);
+    text-align: center;
+}
+
+.kedua .judul{
+    padding-top: 50px;
+}
+
+.kedua .judul h1{
+    color: white;
+    font-weight: 500;
+}
+
+.kedua .judul h1::after{
+    content: "";
+    display: block;
+    border-bottom: 3px solid red;
+    opacity: 1;
+    width: 13%;
+    margin: 0 auto;    
+}
+
+
+.kedua .middle-content{
+    padding-top: 30px;
+}
+
+.kedua .middle-content p{
+    width: 70%;
+}
+
+.player{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 50px auto;
+}
+
+.card{
+    margin: 50px auto;
+    width: 250px;
+    height: 300px;
+}
+
+.imgcard{
+    width: 100%;
+    height: 100%;
+}
+
+.detail{
+    margin-top: -4px;
+    width: 100%;
+    height: 19%;
+    background: white;
+}
+
+audio{
+    width: 100%;
+    height: 100%;
+}
+
+.ketiga{
+    width: 100%;
+    height: auto;
+    padding-bottom: 100px;
+    background: rgb(19, 19, 19);
+    text-align: center;      
+}
+
+.ketiga .judul{
+    padding-top: 45px;
+}
+
+.ketiga .judul h1{
+    color: white;
+    font-weight: 500;
+}
+
+.ketiga .judul h1::after{
+    content: "";
+    display: block;
+    border-bottom: 3px solid red;
+    opacity: 1;
+    width: 13%;
+    margin: 0 auto;    
+}
+
+.ketiga .sponsor{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.ketiga .card{
+    position: relative;
+    margin: 20px auto;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.ketiga .imgcard{
+    width: 100%;
+    height: 100%;
+}
+
+.subfooter{
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    background: rgb(14, 13, 13);
+    text-align: center;
+    overflow: hidden;
+}
+
+.subfooter .kiri{
+    position: relative;
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+
+.kiri .judul{
+    margin: 50px;
+    color: white;
+    font-weight: 100;
+}
+
+.judul .follow{
+    font-weight: bold;
+}
+
+.kiri .judul h1::after{
+    content: "";
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    border-bottom: 3px solid red;
+}
+
+.socail{
+    list-style-type: none;
+    padding-left: 150px;
+    padding-top: 20px;
+}
+
+.icon{
+    display: block;
+    padding: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+.icon.fb{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: blue;
+}
+
+.icon.wa{
+    margin-top: 0px;
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+    background: lime;
+}
+
+.icon.ig{
+    margin-top: 20px;
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+    background: purple;
+}
+
+
+.socail-fb{
+    position: absolute;
+    top: 173px;
+    left: 220px;
+}
+
+.socail-wa{
+    position: absolute;
+    top: 243px;
+    left: 220px;
+}
+
+.socail-ig{
+    position: absolute;
+    top: 240px;
+    left: 220px;
+}
+
+.link-fb{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.link-wa{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.link-ig{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.subfooter .kanan{
+    position: relative;
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+
+
+.kanan .judul{
+    margin: 50px;
+    color: white;
+    font-weight: 100;
+}
+
+.judul .follow{
+    font-weight: bold;
+}
+
+.kanan .judul h1::after{
+    content: "";
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    border-bottom: 3px solid red;
+}
+
+.kanan label{
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    left: 150px;
+}
+
+.email{
+    margin-top: 20px;
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.send{
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.feed{
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    left: 150px;
+    bottom: 110px;
+}
+
+
+.feedback{
+    margin-top: 50px;
+    width: 50%;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+}
+
+.feedback .send{
+    width: 40px;
+    height: 40px;
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    background: #000;
+    text-align: center;
+}
+
+.copy{
+    line-height: 60px;
+    text-decoration: none;
+    color: white;
+}
+
+.dev{
+    color: red;
+}
+
+
+.toge{
+    color: red;
+    font-size: 35px;
+    float: left;
+    padding: 5px 20px;
+    display: none;
+    position: absolute;
+}
+
+#toogle{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .toge{
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-menu{
+        position: absolute;
+        display: none;
+		width: 35%;
+		height: auto;
+        padding-bottom: 100px;
+        text-align: center;
+        top: 60px;
+        left: 0;
+        background: black;
+    }
+
+    #toogle:checked+.nav-menu{
+        display: block;
+    }
+
+    .nav-menu .nav-bar{
+        display: block;
+    }
+
+    .nav-link::after{
+        content: "";
+        display: block;
+        border-bottom: 3px solid red;
+        opacity: 0;
+        transition: all 1s;
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    
+    .nav-link:hover::after{
+        opacity: 1;
+        width: 20%;
+    }
+    
+    .active::after{
+        content: "";
+        display: block;
+        border-bottom: 3px solid red;
+        opacity: 1;
+        transition: all 1s;
+        width: 20%;
+        margin: 0 auto;
+    }
+
+
+    .nav-logo{
+        padding-left: 250px;
+    }
+
+    .kiri .judul{
+        font-size: 16px;
+    }
+
+    .socail{
+        padding-left: 50px;
+        padding-top: 0;
+    }
+
+    .socail-fb{
+        position: absolute;
+        top: 130px;
+        left: 120px;
+    }
+    
+    .socail-wa{
+        position: absolute;
+        top: 200px;
+        left: 120px;
+    }
+    
+    .socail-ig{
+        position: absolute;
+        top: 270px;
+        left: 120px;
+    }
+
+    .subfooter .kanan{
+        margin-bottom: 0;
+    }
+
+    .kanan .judul{
+        font-size: 14px;        
+    }
+
+    .email{
+        margin: 0;
+    }
+
+    .emil{
+        left: 20px;
+        top: 100px;
+    }
+
+    .feed{
+        top: 190px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .toge{
+        padding: 3px 10px; 
+    }
+
+    .nav-logo{
+        padding-left: 50px;
+    }
+
+    .utama .judul{
+        padding: 0;
+        padding-top: 20px;
+        padding-right: 70px;
+    }
+
+    .utama .middle-content{
+        padding-top: 100px;
+    }
+
+    .date{
+        padding: 10px;
+        width: 90%;
+    }
+
+    .subfooter .kiri{
+        width: 100%;
+    }
+
+    .kiri .judul{
+        width: 100%;
+        font-size: 16px;
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .link-fb{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+    
+    .link-wa{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+    
+    .link-ig{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+
+    .socail{
+        padding-left: 50px;
+        padding-top: 0;
+    }
+
+    .socail-fb{
+        position: absolute;
+        top: 135px;
+        left: 120px;
+    }
+    
+    .socail-wa{
+        position: absolute;
+        top: 208px;
+        left: 120px;
+    }
+    
+    .socail-ig{
+        position: absolute;
+        top: 278px;
+        left: 120px;
+    }
+
+    .subfooter .kanan{
+        margin-bottom: 0;
+        width: 100%;
+        text-align: none;
+    }
+
+    .kanan .judul{
+        width: 100%;
+        margin:0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 14px;        
+    }
+
+    .email{
+        margin: 0;
+    }
+
+    .emil{
+        top: 100px;
+    }
+
+    .feed{
+        top: 190px;
+    }
+
+    .copy{
+        font-size: 10px;
+    }
+
+    .dev{
+        font-size: 10px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cf1313;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
