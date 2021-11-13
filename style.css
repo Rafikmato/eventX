@@ -427,6 +427,9 @@ footer{
         margin: 0 auto;
     }
 
+    .container iframe{
+        width: 80%;
+    }
 
     .nav-logo{
         padding-left: 250px;
@@ -465,16 +468,8 @@ footer{
         width: 90%;
     }
 
-    .subfooter .kiri{
-        width: 100%;
-    }
-
-    .kiri .judul{
-        width: 100%;
-        font-size: 16px;
-        margin: 0;
-        margin-top: 50px;
-        margin-bottom: 50px;
+    .container iframe {
+        width: 80%;
     }
 
     .feed{
