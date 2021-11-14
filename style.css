@@ -430,6 +430,10 @@ footer{
     .container iframe{
         width: 80%;
     }
+    
+    .tabel {
+        height: fit-content;
+    }
 
     .nav-logo{
         padding-left: 250px;
@@ -470,6 +474,10 @@ footer{
 
     .container iframe {
         width: 80%;
+    }
+
+    .tabel {
+        height: fit-content;
     }
 
     .feed{
